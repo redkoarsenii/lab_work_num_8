@@ -1,5 +1,113 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 .task1{
-    margin-left: auto;
-    margin-right: auto;
-    background-color: green;
+    padding-left: 15px;
+
+    .task1__title-container{
+        width: fit-content;
+        padding-top: 1px;
+        .task1__title-text{
+            color: var(--darker-gray-text-color);
+        }
+    }
+
+    .task1__main-weather-info-container{
+        display: flex;
+        justify-content: space-between;
+        height: 150px;
+        .task1__main-weather-info-day-info{
+            width: fit-content;
+            line-height: 5px;
+            .task1__weather-date{
+                color: var(--gray-text-color);
+            }
+            .task1__weather-condition{
+                color: var(--gray-text-color);
+            }
+            .task1__weather-temperature-container{
+                display: flex;
+                .task1__weather-icon{}
+                .task1__temperature-value{
+                    margin: auto;
+                    font-size: 35px;
+                    color: var(--gray-text-color);
+                    .task1__temperature-value-item{
+                        font-size: 15px;
+                        position: relative;
+                        top: -15px;
+                        color: var(--gray-text-color);
+                    }
+                }
+                .task1__temperature-value::after{
+                    content: "F";
+                    font-size: 15px;
+                    position: relative;
+                    top: -15px;
+                    color: var(--gray-text-color);
+                }
+            }
+        }
+
+        .task1__main-weather-detailed-info-container{
+            width: fit-content;
+            height: fit-content;
+            position: relative;
+            top: 50px;
+            right: 70px;
+            .task1__main-weather-detailed-info-paragraph{
+                line-height: 5px;
+                color: var(--gray-text-color);
+                .task1__main-weather-detailed-info-paragraph-inner-text{
+                    color: var(--darker-gray-text-color);
+                }
+            }
+        }
+    }
+    .task1__week-weather-container{
+        .task1__week-weather-day-container{
+            display: flex;
+            justify-content: space-between;
+            .task1__week-weather-day{
+                font-weight: bold;
+                width: 70px;
+                color: var(--darker-gray-text-color);
+            }
+            .task1__week-weather-img{}
+            .task1__week-weather-inner-container{
+                .task1__week-weather-day-max-temperature{
+                    color: var(--darker-gray-text-color);
+                }
+                .task1__week-weather-day-min-temperature{
+                    color: var(--gray-text-color);
+                }
+            }
+            .task1__week-weather-day-additional-info{
+                margin-right: 45px;
+                color: var(--gray-text-color);
+                .task1__week-weather-day-additional-info-inner-text{
+                    color: var(--darker-gray-text-color);
+                }
+            }
+        }
+        .task1__week-weather-day-container::before{
+            content: "";
+            display: block;
+            width: 98%;
+            border-top: 1px solid var(--gray-text-color);
+            position: absolute;
+            margin-left: -10px;
+        }
+    }
+    .task1__week-weather-container::after{
+        content: "";
+        display: block;
+        width: 98%;
+        border-top: 1px solid var(--gray-text-color);
+        position: absolute;
+        margin-left: -10px;
+    }
+
 }
