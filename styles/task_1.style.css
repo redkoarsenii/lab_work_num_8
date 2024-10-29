@@ -10,6 +10,8 @@ body{
         width: fit-content;
         padding-top: 1px;
         .task1__title-text{
+            font-size: 36px;
+            margin-bottom: 0;
             color: var(--darker-gray-text-color);
         }
     }
